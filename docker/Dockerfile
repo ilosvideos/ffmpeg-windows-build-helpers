@@ -26,6 +26,7 @@ RUN apt-get update && \
     pax \
     nasm \
     meson \
+    clang \
     gperf \
     autogen \
     bzip2 \
