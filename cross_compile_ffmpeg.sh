@@ -2150,9 +2150,9 @@ build_ffmpeg() {
     # config_options+=" --enable-libvpx"
     # #config_options+=" --enable-libsvtvp9" #not currently working but compiles if configured
 
-    # if [[ $compiler_flavors != "native" ]]; then
-    #   config_options+=" --enable-nvenc --enable-nvdec" # don't work OS X 
-    # fi
+    if [[ $compiler_flavors != "native" ]]; then
+      config_options+=" --enable-nvenc --enable-nvdec" # don't work OS X 
+    fi
 
     # config_options+=" --extra-libs=-lharfbuzz" #  grr...needed for pre x264 build???
     # config_options+=" --extra-libs=-lm" # libflite seemed to need this linux native...and have no .pc file huh?
